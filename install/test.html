@@ -15,10 +15,14 @@
 <![endif]-->
 <link rel="stylesheet" href="./css/install.css">
 <script>
-function testClick(){
-    if($('.yes').length!=7){
+function testClick()
+{
+    if($('.yes').length!=7)
+	{
         alert('您的配置或权限不符合要求');
-    }else{
+    }
+	else
+	{
         location.href='./index.php?c=create';
     }
 }
@@ -89,14 +93,14 @@ function testClick(){
                     <td>./</td>
                     <td>可写</td>
                     <td>
-                        <?php if (is_writable('../../')): ?>
+                        <?php if (is_writable('../')): ?>
                             可写
                         <?php else: ?>
                             不可写
                         <?php endif ?>
                     </td>
-                    <td class="<?php if(is_writable('../../'))echo 'yes'; ?>">
-                        <?php if (is_writable('../../')): ?>
+                    <td class="<?php if(is_writable('../'))echo 'yes'; ?>">
+                        <?php if (is_writable('../')): ?>
                             √
                         <?php else: ?>
                             ×
@@ -104,17 +108,17 @@ function testClick(){
                     </td>
                 </tr>
                 <tr>
-                    <td>./Upload</td>
+                    <td>./uploads</td>
                     <td>可写</td>
                     <td>
-                        <?php if (is_writable('../../Upload')): ?>
+                        <?php if (is_writable('../uploads')): ?>
                             可写
                         <?php else: ?>
                             不可写
                         <?php endif ?>
                     </td>
-                    <td class="<?php if(is_writable('../../Upload'))echo 'yes'; ?>">
-                        <?php if (is_writable('../../Upload')): ?>
+                    <td class="<?php if(is_writable('../uploads'))echo 'yes'; ?>">
+                        <?php if (is_writable('../uploads')): ?>
                             √
                         <?php else: ?>
                             ×
@@ -122,17 +126,17 @@ function testClick(){
                     </td>
                 </tr>
                 <tr>
-                    <td>./Runtime</td>
+                    <td>./library/kernel/Runtime</td>
                     <td>可写</td>
                     <td>
-                        <?php if (is_writable('../../Runtime')): ?>
+                        <?php if (is_writable('../library/kernel/Runtime')): ?>
                             可写
                         <?php else: ?>
                             不可写
                         <?php endif ?>
                     </td>
-                    <td class="<?php if(is_writable('../../Runtime'))echo 'yes'; ?>">
-                        <?php if (is_writable('../../Runtime')): ?>
+                    <td class="<?php if(is_writable('../library/kernel/Runtime'))echo 'yes'; ?>">
+                        <?php if (is_writable('../library/kernel/Runtime')): ?>
                             √
                         <?php else: ?>
                             ×
@@ -140,17 +144,17 @@ function testClick(){
                     </td>
                 </tr>
                 <tr>
-                    <td>./Public/install</td>
+                    <td>./install</td>
                     <td>可写</td>
                     <td>
-                        <?php if (is_writable('../../Public/install')): ?>
+                        <?php if (is_writable('../install')): ?>
                             可写
                         <?php else: ?>
                             不可写
                         <?php endif ?>
                     </td>
-                    <td class="<?php if(is_writable('../../Public/install'))echo 'yes'; ?>">
-                        <?php if (is_writable('../../Public/install')): ?>
+                    <td class="<?php if(is_writable('../install'))echo 'yes'; ?>">
+                        <?php if (is_writable('../install')): ?>
                             √
                         <?php else: ?>
                             ×
@@ -158,17 +162,17 @@ function testClick(){
                     </td>
                 </tr>
                 <tr>
-                    <td>./Application/Common/Conf</td>
+                    <td>../kbug</td>
                     <td>可写</td>
                     <td>
-                        <?php if (is_writable('../../Application/Common/Conf')): ?>
+                        <?php if (is_writable('../kbug/')): ?>
                             可写
                         <?php else: ?>
                             不可写
                         <?php endif ?>
                     </td>
-                    <td class="<?php if(is_writable('../../Application/Common/Conf'))echo 'yes'; ?>">
-                        <?php if (is_writable('../../Application/Common/Conf')): ?>
+                    <td class="<?php if(is_writable('../kbug/'))echo 'yes'; ?>">
+                        <?php if (is_writable('../kbug/')): ?>
                             √
                         <?php else: ?>
                             ×
