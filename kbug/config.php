@@ -15,9 +15,9 @@ return [
     // +----------------------------------------------------------------------
 
     // 应用调试模式
-    'app_debug'              => false,
+    'app_debug'              => true,
     // 应用Trace
-    'app_trace'              => false,
+    'app_trace'              => true,
     // 应用模式状态
     'app_status'             => '',
     // 是否支持多模块
@@ -39,11 +39,14 @@ return [
     // 默认时区
     'default_timezone'       => 'PRC',
     // 是否开启多语言
-    'lang_switch_on'         => false,
+    'lang_switch_on'         => true,
     // 默认全局过滤方法 用逗号分隔多个
     'default_filter'         => '',
     // 默认语言
     'default_lang'           => 'zh-cn',
+    'lang_list'              => ['zh-cn','en-us'],
+    'lang_auto_detect'       =>false,
+    'var_lang'              =>'l',
     // 应用类库后缀
     'class_suffix'           => false,
     // 控制器类后缀
@@ -58,7 +61,7 @@ return [
     // 禁止访问模块
     'deny_module_list'       => ['common'],
     // 默认控制器名
-    'default_controller'     => 'Index',
+    'default_controller'     => 'Login',
     // 默认操作名
     'default_action'         => 'index',
     // 默认验证器
@@ -123,7 +126,8 @@ return [
         // 模板引擎类型 支持 php think 支持扩展
         'type'         => 'Think',
         // 模板路径
-        'view_path'    => '',
+        'view_path'    => TEMPLATE_PATH,
+        'view_theme'    => 'ace',
         // 模板后缀
         'view_suffix'  => 'html',
         // 模板文件名分隔符
@@ -139,7 +143,11 @@ return [
     ],
 
     // 视图输出字符串内容替换
-    'view_replace_str'       => [],
+    'view_replace_str'       => [
+        '__MAIN_THEME_PATH__'=>'templates/ace',
+        '__LOGIN_URL__'=>APP_WORK_DIR.'index/',
+        '__REGISTER_URL__'=>APP_WORK_DIR.'register/'
+    ],
     // 默认跳转页面对应的模板文件
     'dispatch_success_tmpl'  => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
     'dispatch_error_tmpl'    => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
@@ -191,7 +199,7 @@ return [
         // 缓存前缀
         'prefix' => '',
         // 缓存有效期 0表示永久缓存
-        'expire' => 0,
+        'expire' => 1,
     ],
 
     // +----------------------------------------------------------------------

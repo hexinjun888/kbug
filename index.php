@@ -20,8 +20,14 @@ if(file_exists("./install") && !file_exists("./install/install.lock"))
     header("Location:http://$url");
     die;
 }
+// 定义应用程序所在目录
+define('APP_WORK_DIR', '/kbug/');
 
 // 定义应用目录
 define('APP_PATH', __DIR__ . '/kbug/');
+// 定义命名空间
+define('APP_NAMESPACE','kbug');
+// 定义模板目录
+define('TEMPLATE_PATH', __DIR__ . '/templates/');
 // 加载框架引导文件
 require __DIR__ . '/library/kernel/thinkphp/start.php';

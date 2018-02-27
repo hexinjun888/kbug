@@ -1,0 +1,30 @@
+<?php
+return array(
+    'webTitle'=>'SSS',
+    'loginPage'=>array(
+        'title'=>'登录系统',
+        'desption'=>'描述',
+        'userName'=>'用户名',
+        'login_outtime'=>'登陆超时,或者没有登陆',
+        'active'=>'账户没有激活,是否重发激活邮件',
+        'passWord'=>'密码',
+        'remember'=>'保持登录状态',
+        'loginOut'=>'登出成功',
+        'loginButton'=>'登录',
+        'forgetPassword'=>'忘记密码?',
+        'login_name_error'=>'请填写用户名称或者邮件地址',
+        'login_password_error'=>'密码不能少于8位',
+        'login_scuess'=>'登陆成功',
+        'login_error'=>'登陆失败,请检查用户名或者密码!',
+        'register'=>'注册账号',
+        'findPassword'=>'找回密码',
+        'emailAddress'=>'请输入邮件地址',
+        'findPassWordSureButton'=>'提交',
+        'findPassWordCanelButton'=>'取消',
+        'sendEmailScuess'=>'邮件发送成功,请登录邮箱重置密码!',
+        'findPassword_non_existent'=>'邮件地址不存在!',
+        'fast_in'=>'快速接入!',
+        'fast_in_des'=>'最快仅需一周便可接入覆盖全球的云端服务最快仅需一周便可接入覆盖全球的云端服务最快仅需一周便可接入覆盖全球的云端服务最快仅需一周便可接入覆盖全球的云端服务',
+    ),
+);
+?>

@@ -155,9 +155,18 @@ class Lang
             return self::$lang[$range];
         }
 
-        $key   = strtolower($name);
-        $value = isset(self::$lang[$range][$key]) ? self::$lang[$range][$key] : $name;
-
+        if (!strpos($name, '.'))
+        {
+            $key   = strtolower($name);
+            $value = isset(self::$lang[$range][$key]) ? self::$lang[$range][$key] : $name;
+        }
+        else
+        {
+            // 二维数组设置和获取支持
+            $name    = explode('.', $name, 2);
+            $name[0] = strtolower($name[0]);
+            $value =  isset(self::$lang[$range][$name[0]][$name[1]]) ? self::$lang[$range][$name[0]][$name[1]] : null;
+        }
         // 变量解析
         if (!empty($vars) && is_array($vars)) {
             /**
